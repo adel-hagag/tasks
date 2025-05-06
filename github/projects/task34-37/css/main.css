@@ -1,0 +1,97 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.one div{
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    margin: 10px auto;
+    line-height: 55px;
+    font-weight: bold;
+}
+.two{
+background-color: #eee;
+}
+.Three{
+background-color: #eee9;
+}
+:empty{
+    background-color: red;
+}
+.four{
+    background-color: #ccc;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    width: 400px;
+    margin: 10px auto;
+    position: relative;
+}
+.four::first-letter{
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    float: left;
+    top: 50%;
+    margin-left: -35px;
+    margin-top: -10px;
+}
+.five p{
+    background-color: #eee;
+    width: 400px;
+    padding: 20px;
+    margin: 10px auto;
+    font-weight: bold;
+    position: relative;
+    border-left: 5px solid #e91e93;
+}
+.five p::before{
+    content: attr(data-person);
+    background-color: #eee;
+    position: absolute;
+    width: 50px;
+    padding: 10px;
+    left: -95px;
+    top: 12px;
+}
+.five p::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 15px solid;
+    border-color: transparent #e91e93 transparent transparent;
+    float: left;
+    left: -35px;
+    top: 14px;
+}
+.six p{
+    background-color: #eee;
+    font-weight: bold;
+    width: 400px;
+    padding: 20px;
+    margin: 10px auto;
+    position: relative;
+    counter-increment: number;
+}
+.six p::before{
+    content: counter(number);
+    background-color: #f84336;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    float: left;
+    left: -48px;
+    top: 0px;
+}
+.six p::after{
+    content: "";
+    background-color: #f84336;
+    position: absolute;
+    width: 5px;
+    height: 58px;
+    float: right;
+    right: -3px;
+    top: 0px;
+}
